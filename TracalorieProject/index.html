@@ -5,28 +5,83 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <title>Tracalorie | Meal & Calorie Tracker</title>
 </head>
 
 <body>
-  <h1>Hello, world!</h1>
+  <nav>
+    <div class="nav-wrapper blue">
+      <div class="container">
+        <a href="#" class="brand-logo center">Tracalorie</a>
+        <ul class="right">
+          <li><a href="#" class="clear-btn btn blue lighten-3">Clear All</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
+  <br>
+
+  <div class="container">
+    <!--Form card-->
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Add Meal | Food Item</span>
+        <form class="col">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add Item" id="item-name">
+              <label for="item-name">Meal</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="number" placeholder="Add Calories" id="item-calories">
+              <label for="item-calories">Calories</label>
+            </div>
+            <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i>Add Meal</button>
+            <!--<button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i>Update Meal</button>
+            <button class="delete-btn btn red"><i class="fa fa-remove"></i>Delete Meal</button>-->>
+            <button class="back-btn btn grey pull-right"><i class="fa fa-chevron-circle-left"></i>Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Calorie count-->
+    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+
+    <!--Item list-->
+    <ul id="item-list" class="collection">
+      <!--
+      <li class="collection-item" id="item-0">
+        <strong>Steack Dinner: </strong> <em>1200 Calories</em>
+        <a href="#" class="secondary-content"><i class="fa fa-pencil"></i></a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Cookie: </strong> <em>400 Calories</em>
+        <a href="#" class="secondary-content"><i class="fa fa-pencil"></i></a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Eggs: </strong> <em>300 Calories</em>
+        <a href="#" class="secondary-content"><i class="fa fa-pencil"></i></a>
+      </li>-->
+    </ul>
+  </div>
+
+  
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
