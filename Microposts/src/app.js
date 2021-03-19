@@ -1,17 +1,11 @@
-/*const greeting = 'Hello World';
-console.log(greeting);
+import { http } from './http';
+import { ui } from './ui';
 
-const getData = async (url) => {
-  const response = await fetch(url);
-  const result = await response.json();
-  console.log(result);
-};
+//Get posts on DOM load
+document.addEventListener('DOMContentLoaded', getPosts);
 
-getData('https://jsonplaceholder.typicode.com/posts');*/
-
-//CommonJS Module Sintax
-//const person = require('./mymodule');
-
-//ES2015 module
-//import { person } from './mymodule2';
-//console.log(person.name);
+function getPosts(){
+  http.get('http://localhost:3000/posts')
+    .then(data => ui.showPost(data))
+    .catch(err => console.log(err));
+}
